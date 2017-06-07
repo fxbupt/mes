@@ -8,6 +8,16 @@
   <name>parent</name>
   <url>http://maven.apache.org</url>
   
+  <modules>
+    <module>cims-mes-web</module>
+    <module>cims-mes-utils</module>
+    <module>cims-mes-persist</module>
+    <module>cims-mes-orderManagement</module>
+    <module>cims-mes-qualityManagement</module>
+    <module>cims-mes-deviceManagement</module>
+    <module>cims-mes-resourceManagement</module>
+  </modules>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -73,13 +83,5 @@
       </plugins>
     </pluginManagement>
   </build>
-  <modules>
-    <module>cims-mes-web</module>
-    <module>cims-mes-utils</module>
-    <module>cims-mes-persist</module>
-    <module>cims-mes-orderManagement</module>
-    <module>cims-mes-qualityManagement</module>
-    <module>cims-mes-deviceManagement</module>
-    <module>cims-mes-resourceManagement</module>
-  </modules>
+  
 </project>
