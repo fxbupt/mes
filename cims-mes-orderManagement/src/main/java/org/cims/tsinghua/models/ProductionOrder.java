@@ -1,10 +1,12 @@
-package org.cims.tsinghua.model;
+package org.cims.tsinghua.models;
 
 public class ProductionOrder {
   private Integer productId; // the "productId" identify the order
   private String productName; // the "productName" means the name of product
   private Integer productNumber; // the "productNumber" means the number of product
 
+  public ProductionOrder(){}
+  
   public ProductionOrder(Integer id, String name, Integer number) {
     this.productId = id;
     this.productName = name;

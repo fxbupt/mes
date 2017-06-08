@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=divece-width, initial-scale=1" />
+<title>Spring MVC -HelloWorld</title>
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript"
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>
+      CIMS MES <span>alpha</span>
+    </h2>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+      <li><a data-toggle="tab" href="#order">Order Management</a></li>
+      <li><a data-toggle="tab" href="#quality">Quality
+          Management</a></li>
+      <li><a data-toggle="tab" href="#device">Device Management</a></li>
+      <li><a data-toggle="tab" href="#resource">Resource
+          Management</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>
+          Welcome to CIMS MES <span>alpha</span>
+        </h3>
+        <p>There are four modules, namely "Order Management",
+          "Quality Management", "Device Management", "Resource
+          Management". Enjoy.</p>
+        <p><span th:text="${name}"></span></p>
+      </div>
+      <div id="order" class="tab-pane fade">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Production orders outline</div>
+          <table class="table">
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>number</th>
+            </tr>
+            <!-- 
+            <tr th:each="student : ${greeting}">
+              <th th:text="${student.studId}">0</th>
+              <th th:text="${student.name}">zero</th>
+              <th th:text="${student.email}">zero@zero.gmail.com</th>
+              <th th:text="${student.dob}">27052017</th>
+            </tr>
+             -->
+          </table>
+        </div>
+      </div>
+      <div id="quality" class="tab-pane fade">
+        <h3>Welcome to Quality Management</h3>
+        <p>There is nothing to do for now</p>
+      </div>
+      <div id="device" class="tab-pane fade">
+        <h3>Welcome to Device Management</h3>
+        <p>There is nothing to do for now</p>
+      </div>
+      <div id="resource" class="tab-pane fade">
+        <h3>Welcome to Resource Management</h3>
+        <p>There is nothing to do for now</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

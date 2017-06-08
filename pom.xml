@@ -21,6 +21,7 @@
     <tomcat.CATALINA.home>C:\Program Files\apache-tomcat-8.5.14</tomcat.CATALINA.home>
     <!-- <cargo.configuration.home>/home/fx/workspace/cargoConfiguration</cargo.configuration.home> -->
     <cargo.configuration.home>C:\users\fx\workspace\cargoConfiguration</cargo.configuration.home>
+    <cims.version>1.0-SNAPSHOT</cims.version>
     <spring.version>4.3.1.RELEASE</spring.version>
     <junit.version>4.12</junit.version>
     <hamcrest.version>1.3</hamcrest.version>
@@ -40,6 +41,12 @@
   <!-- Use dependencyManagement implement centralized dependencies -->
   <dependencyManagement>
     <dependencies>
+    <dependency>
+      <groupId>org.cims.tsinghua</groupId>
+      <artifactId>cims-mes-orderManagement</artifactId>
+      <version>${cims.version}</version>
+    </dependency>
+    
       <!-- For servlet -->
       <dependency>
         <groupId>javax.servlet</groupId>
