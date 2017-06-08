@@ -11,12 +11,13 @@
 
   <modules>
     <module>cims-mes-web</module>
-    <module>cims-mes-utils</module>
+    
     <module>cims-mes-persist</module>
     <module>cims-mes-orderManagement</module>
-    <module>cims-mes-qualityManagement</module>
-    <module>cims-mes-deviceManagement</module>
-    <module>cims-mes-resourceManagement</module>
+    
+    
+    
+    <module>cims-mes-api</module>
   </modules>
 
   <properties>
