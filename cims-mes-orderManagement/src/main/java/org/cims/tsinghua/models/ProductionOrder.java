@@ -1,44 +1,59 @@
 package org.cims.tsinghua.models;
 
+import java.util.Date;
+
 public class ProductionOrder {
-  private Integer productId; // the "productId" identify the order
-  private String productName; // the "productName" means the name of product
-  private Integer productNumber; // the "productNumber" means the number of product
-
-  public ProductionOrder(){}
+  private Integer orderID;
+  private String orderSerialNumber;
+  private String productName;
+  private Integer productQuantity;
+  private Date expectedStartDate;
+  private Date expectedEndDate;
+  private Integer priority;
   
-  public ProductionOrder(Integer id, String name, Integer number) {
-    this.productId = id;
-    this.productName = name;
-    this.productNumber = number;
+  public void setOrderID(Integer orderID){
+    this.orderID = orderID;
   }
-
-  public void setId(Integer id) {
-    this.productId = id;
+  public void setOrderSerialNumber(String orderSerialNumber){
+    this.orderSerialNumber = orderSerialNumber;
   }
-
-  public void setName(String name) {
-    this.productName = name;
+  public void setProductName(String productName){
+    this.productName = productName;
   }
-
-  public void setNumber(Integer number) {
-    this.productNumber = number;
+  public void setProductQuantity(Integer productQuantity){
+    this.productQuantity = productQuantity;
   }
-
-  public Integer getId() {
-    return this.productId;
+  public void setExpectedStartDate(Date expectedStartDate){
+    this.expectedStartDate = expectedStartDate;
   }
-
-  public String getName() {
+  public void setExpectedEndDate(Date expectedEndDate){
+    this.expectedEndDate = expectedEndDate;
+  }
+  
+  public Integer getOrderID(){
+    return this.orderID;
+  }
+  public String getOrderSerialNumber(){
+    return this.orderSerialNumber;
+  }
+  public String getProductName(){
     return this.productName;
   }
-
-  public Integer getNumber() {
-    return this.productNumber;
+  public Integer getProductQuantity(){
+    return this.productQuantity;
   }
-
+  public Date getExpectedStartDate(){
+    return this.expectedStartDate;
+  }
+  public Date getExpectedEndDate(){
+    return this.expectedEndDate;
+  }
+  public Integer getPriority(){
+    return this.priority;
+  }
+  
   @Override
-  public String toString() {
-    return "id: " + productId + "/n" + "name: " + productName + "/n" + "number: " + productNumber;
+  public String toString(){
+    return "Order ID:" + orderID + "\n" + "Order Serial Number" + orderSerialNumber + "\n" + "Product Name:" + productName;
   }
 }
