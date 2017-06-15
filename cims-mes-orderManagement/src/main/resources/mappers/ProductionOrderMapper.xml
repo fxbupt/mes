@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.cims.tsinghua.mappers.ProductionOrderMapper">
+<mapper namespace="org.cims.tsinghua.daos.ProductionOrderReposity">
   <resultMap type="ProductionOrder" id="ProductionOrderResult">
     <id property="orderID" column="id"/>
     <result property="orderSerialNumber" column="order_serial_number" />
