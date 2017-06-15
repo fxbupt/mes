@@ -17,10 +17,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
     <tomcat.CATALINA.home>${env.CATALINA_HOME}</tomcat.CATALINA.home>
     <cargo.configuration.home>/home/fx/workspace/cargoConfiguration</cargo.configuration.home>
+    
     <!-- <tomcat.CATALINA.home>C:\Program Files\apache-tomcat-8.5.14</tomcat.CATALINA.home>
     <cargo.configuration.home>C:\users\fx\workspace\cargoConfiguration</cargo.configuration.home> -->
+    
     <cims.version>1.0-SNAPSHOT</cims.version>
     <spring.version>4.3.1.RELEASE</spring.version>
     <junit.version>4.12</junit.version>

@@ -5,7 +5,7 @@ import org.cims.tsinghua.models.ProductionOrder;
 
 public interface ProductionOrderRepository {
   public List<ProductionOrder> selectAllProductionOrder();
-  public ProductionOrder selectProductionOrderByID(Integer orderID);
+  public ProductionOrder selectProductionOrderByID(int orderID);
   public void insertProductionOrder(ProductionOrder productionOrder);
 }
 

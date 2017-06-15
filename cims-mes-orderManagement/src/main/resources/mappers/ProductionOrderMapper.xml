@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.cims.tsinghua.daos.ProductionOrderReposity">
+<mapper namespace="org.cims.tsinghua.daos.ProductionOrderRepository">
   <resultMap type="ProductionOrder" id="ProductionOrderResult">
     <id property="orderID" column="id"/>
     <result property="orderSerialNumber" column="order_serial_number" />
@@ -9,7 +9,7 @@
     <result property="productQuantity" column="product_quantity" />
     <result property="expectedStartDate" column="expected_start_date"/>
     <result property="expectedEndDate" column="expected_end_date"/>
-    <result property="priority" column="priotity"/>
+    <result property="priority" column="priority"/>
   </resultMap>
 
   <select id="selectAllProductionOrder" resultMap="ProductionOrderResult">
@@ -17,13 +17,13 @@
   </select>
   
   <select id="selectProductionOrderByID" parameterType="int" resultType="ProductionOrder">
-    SELECT id, order_serial_number, product_name, product_quantity, expected_start_date, expected_end_date, priotity
+    SELECT id AS orderID, order_serial_number AS orderSerialNumber, product_name AS productName, product_quantity, expected_start_date, expected_end_date, priority
     FROM production_order
     WHERE id=#{orderID}
   </select>
   
   <insert id="insertProductionOrder">
-    INSERT INTO production_order(id, order_serial_number, product_name, product_quantity, expected_start_date, expected_end_date, priotity)
-    VALUES (#{orderID}, #{OrderSerialNumber}, #{productName}, #{productQuantity}, #{expectedStartDate}, #{expectedEndDate}, #{priotity})
+    INSERT INTO production_order(id, order_serial_number, product_name, product_quantity, expected_start_date, expected_end_date, priority)
+    VALUES (#{orderID}, #{OrderSerialNumber}, #{productName}, #{productQuantity}, #{expectedStartDate}, #{expectedEndDate}, #{priority})
   </insert>
 </mapper>

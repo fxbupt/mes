@@ -3,7 +3,7 @@ package org.cims.tsinghua.models;
 import java.util.Date;
 
 public class ProductionOrder {
-  private Integer orderID;
+  private int orderID;
   private String orderSerialNumber;
   private String productName;
   private Integer productQuantity;
@@ -11,7 +11,7 @@ public class ProductionOrder {
   private Date expectedEndDate;
   private Integer priority;
   
-  public void setOrderID(Integer orderID){
+  public void setOrderID(int orderID){
     this.orderID = orderID;
   }
   public void setOrderSerialNumber(String orderSerialNumber){
@@ -20,7 +20,7 @@ public class ProductionOrder {
   public void setProductName(String productName){
     this.productName = productName;
   }
-  public void setProductQuantity(Integer productQuantity){
+  public void setProductQuantity(int productQuantity){
     this.productQuantity = productQuantity;
   }
   public void setExpectedStartDate(Date expectedStartDate){
@@ -30,7 +30,7 @@ public class ProductionOrder {
     this.expectedEndDate = expectedEndDate;
   }
   
-  public Integer getOrderID(){
+  public int getOrderID(){
     return this.orderID;
   }
   public String getOrderSerialNumber(){
@@ -39,7 +39,7 @@ public class ProductionOrder {
   public String getProductName(){
     return this.productName;
   }
-  public Integer getProductQuantity(){
+  public int getProductQuantity(){
     return this.productQuantity;
   }
   public Date getExpectedStartDate(){
@@ -54,6 +54,6 @@ public class ProductionOrder {
   
   @Override
   public String toString(){
-    return "Order ID:" + orderID + "\n" + "Order Serial Number" + orderSerialNumber + "\n" + "Product Name:" + productName;
+    return "Order ID:" + orderID + "\n" + "Order Serial Number: " + orderSerialNumber + "\n" + "Product Name:" + productName;
   }
 }
