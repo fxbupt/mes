@@ -1,5 +1,7 @@
 package org.cims.tsinghua.ContextConfig;
 
+import javax.sql.DataSource;
+
 //import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -25,7 +27,7 @@ public class RootConfig {
   Environment env;
 
   @Bean
-  public DriverManagerDataSource dataSource() {
+  public DataSource dataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.jdbc.Driver");
     dataSource.setUrl(env.getProperty("spring.datasource.url"));

@@ -16,8 +16,8 @@
     SELECT * FROM production_order
   </select>
   
-  <select id="selectProductionOrderByID" parameterType="int" resultType="ProductionOrder">
-    SELECT id AS orderID, order_serial_number AS orderSerialNumber, product_name AS productName, product_quantity, expected_start_date, expected_end_date, priority
+  <select id="selectProductionOrderByID" parameterType="int" resultMap="ProductionOrderResult">
+    SELECT id, order_serial_number, product_name, product_quantity, expected_start_date, expected_end_date, priority
     FROM production_order
     WHERE id=#{orderID}
   </select>
