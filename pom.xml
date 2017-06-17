@@ -38,8 +38,9 @@
     <thymeleaf-spring4.version>2.1.2.RELEASE</thymeleaf-spring4.version>
     <bootstrap.version>3.3.7</bootstrap.version>
     <aspectj.version>1.7.3</aspectj.version>
+    <slf4j-api.version>1.7.25</slf4j-api.version>
     <logback-classic.version>1.2.3</logback-classic.version>
-    <jcl-over-slf4j.version>1.7.21</jcl-over-slf4j.version>
+    <jcl-over-slf4j.version>1.7.25</jcl-over-slf4j.version>
   </properties>
   <!-- Use dependencyManagement implement centralized dependencies -->
   <dependencyManagement>
@@ -189,9 +190,20 @@
 
       <!-- logging -->
       <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j-api.version}</version>
+      </dependency>
+      <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
         <version>${logback-classic.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
