@@ -44,6 +44,7 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
     templateResolver.setSuffix(".html");
     templateResolver.setCharacterEncoding("UTF-8");
     templateResolver.setTemplateMode("HTML5");
+    templateResolver.setCacheable(false);
     return templateResolver;
   }
 
